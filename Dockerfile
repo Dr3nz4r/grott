@@ -13,7 +13,8 @@ RUN apt-get install -y locales && locale-gen en_US.UTF-8
 RUN pip install paho-mqtt
 RUN pip install requests 
 RUN pip install influxdb
-RUN pip install influxdb-client 
+RUN pip install influxdb-client
+RUN pip install libscrc  
 
 COPY grott.py /app/grott.py
 COPY grottconf.py /app/grottconf.py
