@@ -36,10 +36,14 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           # Adds tags like 'main', 'latest', or the release version number
           tags: |
-            type=raw,value=latest,enable={{isSourceRef('refs/heads/master')}}
+            # Apply 'latest' tag ONLY if the branch name is 'main'
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            
+            # Apply other dynamic tags
             type=schedule,pattern=nightly
             type=ref,event=branch
             type=sha,format=short
+            # If you use releases, this handles version numbers (semver)
             type=semver,pattern={{version}}
   
       - name: Build and push Docker image
