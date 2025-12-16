@@ -104,6 +104,8 @@ def procdata(conf,data):
         if (conf.invtype != "default") and not is_smart_meter :
                 layout = layout + conf.invtype.upper()
 
+        if conf.verbose : print("\t - " + "expected layout name  : ", layout)
+
         if header[14:16] == "50" : buffered = "yes"
         else: buffered = "no" 
 
