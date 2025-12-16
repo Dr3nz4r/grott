@@ -1622,80 +1622,77 @@ class Conf :
         #     "eractoday"         : {"value" :326, "length" : 4, "type" : "num", "divide" : 1,"incl" : "no"},                
         #     "eractotal"         : {"value" :334, "length" : 4, "type" : "num", "divide" : 1,"incl" : "no"} 
         #     } } 
-        self.recorddict15 = 'T020103MTL': {
-            'protocol': 'T020103MTL',
-            'description': 'Layout using character offsets (required by Grott processing logic)',
-            'values': {
-                'pvserial': {
-                    'value': 16,     # Character Offset: 16 (matches 8 bytes)
-                    'length': 16,    # Character Length: 16 (matches length of SN text)
-                    'type': 'text'
-                },
-                'pvstatus': {
-                    'value': 52,     # Character Offset: 52 (matches 26 bytes)
-                    'length': 2,     # Character Length: 2 (matches 2 bytes)
-                    'type': 'num'
-                },
-                'pvpowerin': {
-                    'value': 60,     # Character Offset: 60
-                    'length': 4,     # Character Length: 4
-                    'type': 'num',
-                    'divide': 10
-                },
-                'pvenergytoday': { 
-                    'value': 76, 
-                    'length': 4, 
-                    'type': 'num', 
-                    'divide': 100 
-                },
-                'pvenergytotal': { 
-                    'value': 84, 
-                    'length': 4, 
-                    'type': 'num', 
-                    'divide': 100 
-                },
-                'pvgridvoltage_R': { 
-                    'value': 92, 
-                    'length': 2, 
-                    'type': 'num', 
-                    'divide': 10 
-                },
-                'pvfrequentie': { 
-                    'value': 116, 
-                    'length': 2, 
-                    'type': 'num', 
-                    'divide': 100 
-                },
-                'pvtemperature': { 
-                    'value': 124, 
-                    'length': 2, 
-                    'type': 'num', 
-                    'divide': 10 
-                },
-                'totworktime': { 
-                    'value': 128, 
-                    'length': 4, 
-                    'type': 'num' 
-                },
-                'pv1voltage': { 
-                    'value': 232, 
-                    'length': 2, 
-                    'type': 'num', 
-                    'divide': 10 
-                },
-                'pv1current': { 
-                    'value': 236, 
-                    'length': 2, 
-                    'type': 'num', 
-                    'divide': 10 
-                },
-                'pv1watt': { 
-                    'value': 240, 
-                    'length': 4, 
-                    'type': 'num', 
-                    'divide': 10 
-                }
-            } }
+        self.recorddict15 = {'T020103MTL': {
+            'pvserial': {
+                'value': 16,     # Character Offset: 16 (matches 8 bytes)
+                'length': 16,    # Character Length: 16 (matches length of SN text)
+                'type': 'text'
+            },
+            'pvstatus': {
+                'value': 52,     # Character Offset: 52 (matches 26 bytes)
+                'length': 2,     # Character Length: 2 (matches 2 bytes)
+                'type': 'num'
+            },
+            'pvpowerin': {
+                'value': 60,     # Character Offset: 60
+                'length': 4,     # Character Length: 4
+                'type': 'num',
+                'divide': 10
+            },
+            'pvenergytoday': { 
+                'value': 76, 
+                'length': 4, 
+                'type': 'num', 
+                'divide': 100 
+            },
+            'pvenergytotal': { 
+                'value': 84, 
+                'length': 4, 
+                'type': 'num', 
+                'divide': 100 
+            },
+            'pvgridvoltage_R': { 
+                'value': 92, 
+                'length': 2, 
+                'type': 'num', 
+                'divide': 10 
+            },
+            'pvfrequentie': { 
+                'value': 116, 
+                'length': 2, 
+                'type': 'num', 
+                'divide': 100 
+            },
+            'pvtemperature': { 
+                'value': 124, 
+                'length': 2, 
+                'type': 'num', 
+                'divide': 10 
+            },
+            'totworktime': { 
+                'value': 128, 
+                'length': 4, 
+                'type': 'num' 
+            },
+            'pv1voltage': { 
+                'value': 232, 
+                'length': 2, 
+                'type': 'num', 
+                'divide': 10 
+            },
+            'pv1current': { 
+                'value': 236, 
+                'length': 2, 
+                'type': 'num', 
+                'divide': 10 
+            },
+            'pv1watt': { 
+                'value': 240, 
+                'length': 4, 
+                'type': 'num', 
+                'divide': 10 
+            }
+        } }
       
         self.recorddict.update(self.recorddict1)
         self.recorddict.update(self.recorddict2)
